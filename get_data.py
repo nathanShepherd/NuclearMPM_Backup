@@ -1,9 +1,7 @@
-from pickle import FALSE
 import numpy as np
 import pandas as pd
 import pickle5 as pkl
 from pathlib import Path
-# TODO: export venv requirements
 
 def parse_text_files(data_dir="../../build/tmp"):
     sim_dict_path = Path('sim_results_dict.pkl')
@@ -130,8 +128,6 @@ def concat_dataframe(verbose=False):
     data_dict['velocity'].to_csv(vel_csv)
 
     return sub_df, data_dict['velocity'], data_dict['mass']
-    
-    
 
 if __name__ == "__main__":
     concat_dataframe()
